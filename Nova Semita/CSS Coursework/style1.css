@@ -1,0 +1,22 @@
+*
+{
+    box-sizing: border-box;
+}
+
+#welcome-section
+{
+    padding-top: 100px;height: 100%;
+}
+
+#welcome-section h1{
+    color:#f9fafc;
+}
+#welcome-section p{
+    color:#018afe;
+}
+.material-icons.orange600 { color: #FB8C00; }
+
+
+*{
+    font-family: 'Yeon Sung', ;
+}
