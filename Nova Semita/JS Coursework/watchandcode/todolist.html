@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  
+
   <script>
-    
+
     var todos = {
-        todo: [],
-        displayTodo: function () {
-         for(var i = 0;i<this.todo.length;i++)
-         {
-           console.log(this.todo[i].todoText);
-         }
-        },
-        addTodo: function (todoText) {
-          this.todo.push({ todoText: todoText, completed: false });
-          this.disTodo();
-        },
-        changeTodo: function (position, todoText) {
-          this.todo[position].todoText = todoText;
-          this.disTodo();
-        },
-        deleteTodo: function (position) {
-          this.todo.splice(position, 1);
-          this.disTodo();
-        },
-        toggleTodo:function(position)
-        {
-          var todo=this.todo[position];
-          todo.completed=!todo.completed;
-          this.disTodo();
+      todo: [],
+      displayTodo: function () {
+        if (this.todo.length === 0) {
+          console.log("Your todo list is empty!")
         }
-      };
+        else {
+          for (var i = 0; i < this.todo.length; i++) {
+            if(this.todo[i].completed===true)
+            {
+              console.log("(x)",this.todo[i].todoText);
+            }
+            else{
+              console.log("( )",this.todo[i].todoText);
+            }
+          }
+        }
+      },
+      addTodo: function (todoText) {
+        this.todo.push({ todoText: todoText, completed: false });
+        this.displayTodo();
+      },
+      changeTodo: function (position, todoText) {
+        this.todo[position].todoText = todoText;
+        this.displayTodo();
+      },
+      deleteTodo: function (position) {
+        this.todo.splice(position, 1);
+        this.displayTodo();
+      },
+      toggleTodo: function (position) {
+        var todo = this.todo[position];
+        todo.completed = !todo.completed;
+        this.displayTodo();
+      }
+    };
   </script>
 </body>
+
 </html>
