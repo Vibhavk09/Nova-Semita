@@ -5,13 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  
+
 </head>
 
 <body>
   <h1>Todo List</h1>
-  <button onclick="handlers.displayTodos()">Display Todos</button>
-  <button onclick="handlers.toggleAll()">Toggle All</button>
+  <div>
+    <button onclick="handlers.displayTodos()">Display Todos</button>
+    <button onclick="handlers.toggleAll()">Toggle All</button>
+  </div>
+  <div>
+    <button onclick="handlers.addTodos()">Add</button>
+    <input id="addTodoTextInput" type="text">
+  </div>
+  <div>
+    <button onclick="handlers.changeTodos()">Change</button>
+    <label>Text :</label>
+    <input type="text" id="changeTodoTextInput">
+    <label>Position :</label>
+    <input type="number" id="changeTodoPositionInput">
+  </div>
+  <div>
+    <button onclick="handlers.deleteTodos()">Delete</button>
+    <label>Position :</label>
+    <input type="number" id="deleteTodoPositionInput">
+  </div>
+  <div>
+    <button onclick="handlers.toggleTodos()">Toggle</button>
+    <label>Position :</label>
+    <input type="number" id="toggleTodoPosition">
+  </div>
   <script src="script.js"></script>
 </body>
 
